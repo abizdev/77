@@ -10,33 +10,63 @@
     font-family: 'inter';
     font-weight: 400;
   }
+
   a {
     text-decoration: none;
   }
+
   li {
     list-style: none;
   }
 }
+
 @layer components {
+
   .btn {
     @apply rounded-md flex items-center gap-2 transition duration-300
   }
+
   .btn-primery {
     @apply py-3 px-7 bg-black text-white text-base/[130%] hover:bg-sky-500
   }
+
   .btn-secondary {
     @apply text-sm font-semibold p-1.5 md:py-2.5 md:px-6 bg-gray-200 hover:bg-gray-300
   }
+
   .section__heading {
     @apply flex flex-col items-center justify-center text-center
   }
+
   .section__heading h2 {
     @apply text-4xl font-bold text-black
   }
+
   .section__heading p {
     @apply text-sm text-gray-500 mt-2
   }
+
   .item-border {
     @apply bg-white border border-gray-200 
   }
+
+  .categories__item {
+    @apply relative item-border rounded-xl pr-3 pl-11 py-[22px] flex items-center justify-end gap-6 shadow-md w-[336px]
+  }
+
+  .categories__item--img {
+    @apply absolute top-[50%] -left-9 -translate-y-[50%] w-16 h-16 item-border rounded-xl flex items-center justify-center shadow-md
+  }
+
+  .categories__item--info {
+    @apply flex flex-col flex-grow gap-1
+  }
+
+  .categories__item--info h4 {
+    @apply text-base/[119%] font-semibold
+  }
+  .categories__item--info p {
+    @apply text-sm text-gray-300
+  }
+
 }
