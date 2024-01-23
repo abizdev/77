@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>77</title>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body class="bg-gray-100">
+    
+    <!-- header -->
+    <header class="header py-3 md:py-5 sticky top-0 z-40 bg-white/[0.92] group before:absolute before:top-0 before:z-[-1] before:w-full before:h-full before:backdrop-blur-[6px]">
+      <div class="container mx-auto">
+        <!-- header content -->
+        <div class="header__content flex justify-between items-center">
+          <!-- header contacts -->
+          <div class="header__content-contacts flex items-center gap-6">
+            <div class="header__content-lang cursor-pointer text-sm/[130%] text-bold text-black flex items-center gap-1">
+              <img src="assets/images/ru-lang.png" alt="lang">
+              <span class="text-sm font-medium hidden md:block">Русский</span>
+              <span class="text-sm font-medium uppercase md:hidden">Ру</span>
+              <img src="assets/images/icons/chevron-down.svg" alt="chevron-down">
+            </div>
+            <a href="tel:+998885005000" class="hidden md:flex text-sm/[130%] text-bold text-black items-center gap-2">
+              <img src="./assets/images/icons/phone.svg" alt="phone">
+              +998 88 500 50 00
+            </a>
+          </div>
+
+          <!-- header logo -->
+          <a href="#!" class="header__content-logo absolute left-[50%] -translate-x-[50%] translate-y-4 md:translate-y-3 px-3.5 p-3 md:py-4 bg-white border border-gray-200 rounded-[20px] md:rounded-b-[20px] md:rounded-t-none group-hover:shadow-lg transition duration-300 ">
+            <img src="assets/images/logo.png" class="w-24 md:w-full" alt="logo">
+          </a>
+
+          <!-- header links -->
+          <div class="header__content-links flex items-center gap-3 md:gap-4">
+            <a href="#!" class="btn btn-secondary md:bg-transparent md:rounded-none md:p-0 hover:bg-transparent">
+              <img src="assets/images/icons/heart-blue.svg" alt="like">
+             <span class="hidden md:block">Избранные</span>
+            </a>
+
+            <span class="hidden md:block w-[1px] h-[32px] bg-gray-100 hidden md:block"></span>
+
+            <a href="#!" class="btn btn-secondary">
+              <span class="hidden md:block">Войти</span>
+              <img src="./assets/images/icons/log-out.svg" alt="log-out">
+            </a>
+          </div>
+        </div>
+        <!-- header content -->
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- main -->
+    <main class="main flex flex-col items-center bg-white mt-[76px]">
+      <!-- search form -->
+      <form class="search-form flex items-center gap-2 p-2 -translate-y-2/4 item-border rounded-lg">
+        <img src="assets/images/icons/search.svg" alt="search">
+        <input type="text" placeholder="Что вы ищите?" class="flex-grow h-full w-[580px]">
+        <button class="btn btn-primery">Поиск</button>
+      </form>
+      <!-- search form end -->
+
+      <!-- categories -->
+      <section class="categories pt-14 pb-6">
+
+        <div class="section__heading">
+          <h2>Категории</h2>
+          <p>Вы можете найти все категории, которые вам нужны от покупателя</p>
+        </div>
+
+        <!-- categories content -->
+        <div class="categories__content">
+          <!-- categories-item -->
+          <article class="categories__item relative item-border rounded-xl pr-3 pl-11 py-[22px] flex items-center justify-between gap-7 mt-10 shadow-md">
+            <div class="categories__item--img absolute top-[50%] -left-9 -translate-y-[50%] w-16 h-16 item-border rounded-xl flex items-center justify-center shadow-md">
+              <img src="assets/images/categories/category1.svg" alt="category">
+            </div>
+
+            <div class="categories__item--info flex flex-col gap-1">
+              <h4 class="text-base/[0.625] font-semibold">Для женщин</h4>
+              <p class="text-sm text-gray-300">4 147 объявлений</p>
+            </div>
+            <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
+          </article>
+
+        </div>
+        <!-- categories content end -->
+      </section>
+      <!-- categories end -->
+    </main>
+    <!-- main end -->
+
+    <!-- <script type="module" src="./main.js"></script> -->
+  </body>
+</html>
