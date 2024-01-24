@@ -50,8 +50,9 @@
     @apply bg-white border border-gray-200 
   }
 
+  /* categories */
   .categories__item {
-    @apply relative item-border rounded-xl pr-3 pl-11 py-[22px] flex items-center justify-end gap-6 shadow-md w-[336px]
+    @apply relative item-border rounded-xl pr-3 pl-11 py-[22px] flex items-center justify-end gap-6 shadow-md w-[336px] cursor-pointer
   }
 
   .categories__item--img {
@@ -69,4 +70,53 @@
     @apply text-sm text-gray-300
   }
 
+  /* product card */
+  .product-card {
+    @apply relative bg-white border-2 border-white rounded-xl overflow-hidden cursor-pointer hover:shadow-md transition duration-300
+  }
+  .product-card:hover .product-card__info-name {
+    @apply text-blue-400
+  }
+
+  .product-card button {
+    @apply absolute top-4 left-4 w-10 h-10
+  }
+
+  .product-card button img {
+    @apply w-full h-full
+  }
+
+  .product-card-img {
+    @apply w-full h-60
+  }
+
+  .product-card__info {
+    @apply p-5 flex flex-col items-start
+  }
+
+  .product-card__info-city {
+    @apply text-xs text-gray-600 py-1 px-2 bg-gray-200 rounded-md
+  }
+
+  .product-card__info-name {
+    @apply text-lg/[130%] flex-grow font-semibold mt-4 text-ellipsis overflow-hidden transition duration-300;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .product-card__info-date {
+    @apply text-sm text-gray-300 mt-2
+  }
+
+  .product-card__info-phone {
+    @apply text-base/[130%] text-gray-400 font-semibold mt-2
+  }
+
+  .product-card__info-price {
+    @apply text-2xl/[130%] font-bold flex items-center gap-2 mt-4 
+  }
+  .product-card__info-price span {
+    @apply text-base text-blue-400
+  }
 }
