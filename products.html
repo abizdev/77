@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
   </head>
   <body class="bg-gray-100">
-    
+
     <!-- header -->
     <header class=" py-3 md:py-5 sticky top-0 z-40 bg-white/[0.92] group before:absolute before:top-0 before:z-[-1] before:w-full before:h-full before:backdrop-blur-[6px]">
       <div class="container">
@@ -59,383 +59,37 @@
     <!-- header end -->
 
     <!-- main -->
-    <main class="main bg-white mt-[76px]">
-      <!-- search form -->
-      <form class="search-form self-center max-w-[580px] w-[90%] m-auto flex  items-center gap-2 p-2 -translate-y-2/4 item-border rounded-lg">
-        <img src="assets/images/icons/search.svg" alt="search">
-        <input type="text" placeholder="Что вы ищите?" class="w-full h-full ">
-        <button class="btn btn-primery">Поиск</button>
-      </form>
-      <!-- search form end -->
+    <main>
+      <!-- pages navigation -->
+      <div class="container flex items-center gap-[6px] mt-5 p-3">
+        <a href="#!" class="text-sm/[130%] text-black font-medium">Главная</a>
+        <span class="w-1 h-1 bg-gray-200 rounded-full"></span>
+        <a href="#!" class="text-sm/[130%] text-gray-200 font-medium">Рестораны и кафе</a>
+      </div>
+      <!-- pages navigation end -->
 
-      <!-- categories -->
-      <section class="categories pb-6">
+      <div class="container mt-5 mb-[60px]">
+        <section class="flex flex-col gap-7">
 
-        <div class="section__heading">
-          <h2>Категории</h2>
-          <p>Вы можете найти все категории, которые вам нужны от покупателя</p>
-        </div>
-
-        <div class="container">
-          <!-- categories content -->
-          <div class="categories__content w-full mt-10 flex flex-wrap items-center justify-center xl:justify-between gap-y-5 gap-x-10">
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category1.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Для женщин</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-            
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category2.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Красота</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category3.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Бытовая техника</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-            
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category4.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Для мужчин</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category5.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Здоровье</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category6.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Электроника</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category7.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Детские товары</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category8.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Украшения и бижутерия</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category9.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Домашняя утварь</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category10.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Обувь</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category11.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Канцелярия</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category12.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Спорт и отдых</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category13.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Автотовары</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category14.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Новые легковые автомобили</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category15.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Мототранспорт</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category16.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Дача, сады и огороды</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category17.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Личная гигиена</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category18.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Аксессуарлар</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category19.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Бытовая химия и личная гигиена</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category20.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Строительство и ремонт</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
-  
-            <!-- categories-item -->
-            <article class="categories__item">
-              
-              <div class="categories__item--img ">
-                <img src="assets/images/categories/category21.svg" alt="category">
-              </div>
-  
-              <div class="categories__item--info">
-                <h4>Сумки и чемоданы</h4>
-                <p>4 147 объявлений</p>
-              </div>
-              
-              <a href="#!"><img src="assets/images/icons/chevron-right.svg" alt="chevron-right"></a>
-              
-            </article>
+          <!-- products heading -->
+          <div class="flex flex-col">
+            <h2 class="mb-3 text-[32px] leading-10 text-black font-bold">Ноутбуки и планшеты</h2>
+            <div class="self-end flex items-center gap-3">
+              <button class="w-7 h-7">
+                <img src="../assets/images/icons/grid.svg" alt="grid">
+              </button>
+              <button class="w-7 h-7">
+                <img src="../assets/images/icons/list.svg" alt="list">
+              </button>
+            </div>
+            <p class="text-sm text-gray-400">156 объявлений</p>
           </div>
-          <!-- categories content end -->
-        </div>
-      </section>
-      <!-- categories end -->
+          <!-- products heading end -->
 
-      <!-- ads -->
-      <section class="ads bg-gray-100 pt-16 pb-[72px]">
-
-        <div class="section__heading">
-          <h2>
-            <a href="products.html">Объявления</a>
-          </h2>
-          <p>Вы можете найти все категории, которые вам нужны от покупателя</p>
-        </div>
-
-        <div class="container">
-          <!-- ads content -->
-          <div class="mt-10 grid grid-cols-4 gap-6">
-  
-            <!-- product card -->
-            <article class="product-card">
+          <!-- products -->
+          <div class="grid grid-cols-3 gap-6">
+             <!-- product card -->
+             <article class="product-card">
               <button>
                 <img src="assets/images/icons/heart-white.svg" alt="like-btn">
               </button>
@@ -444,7 +98,7 @@
               
               <div class="product-card__info">
                 <span class="product-card__info-city">г. Ташкент</span>
-                <a href="product.html" class="product-card__info-name">Кепки Corneliani Diamond for him edition.</a>
+                <a href="#!" class="product-card__info-name">Кепки Corneliani Diamond for him edition.</a>
                 <p class="product-card__info-date">Вчера, 19:20</p>
                 <a href="tel:+998712007070" class="product-card__info-phone">+998 71 200 70 07</a>
                 <p class="product-card__info-price">2 599 000 <span>UZS</span></p>
@@ -649,18 +303,11 @@
               </div>
 
             </article>
-  
           </div>
-          <!-- ads content end -->
+          <!-- products end -->
 
-          <button class="mx-auto mt-10 btn btn-secondary rounded-[100px]">
-            Загрузить больше
-            <img src="assets/images/icons/chevron-double-down.svg" alt="chevron-down">
-          </button>
-        </div>
-
-      </section>
-      <!-- ads end-->
+        </section>
+      </div>
     </main>
     <!-- main end -->
 
@@ -715,7 +362,6 @@
       <!-- footer-bottom end -->
     </footer>
     <!-- footer end -->
-
-    <!-- <script type="module" src="./main.js"></script> -->
+    
   </body>
 </html>

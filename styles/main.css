@@ -119,4 +119,40 @@
   .product-card__info-price span {
     @apply text-base text-blue-400
   }
+
+  /* single product */
+  .product {
+    @apply p-4 bg-white rounded-md
+  }
+
+  .product__slider-img {
+    @apply relative h-[481px] rounded-md overflow-hidden
+  }
+
+  .product__slider-slides {
+    @apply mt-5 relative flex items-center gap-3 overflow-x-scroll cursor-grab active:cursor-grabbing;
+  }
+
+  .product__slider-slides::-webkit-scrollbar {
+    display: none;
+  }
+
+  .product__slider-btn {
+    @apply absolute top-[50%] -translate-y-[50%] w-8 h-8 flex items-center justify-center rounded-full cursor-pointer bg-white hover:bg-blue-400
+  }
+  
+  .product__slider-slides::before,
+  .product__slider-slides::after {
+    @apply absolute z-10 top-[50%] left-0 -translate-y-[50%];
+    background: linear-gradient(90deg, #FFF -2.33%, rgba(255, 255, 255, 0.00) 100%);
+  }
+
+  .product__slider-slides::after {
+    @apply right-0;
+    background: linear-gradient(270deg, #FFF -2.33%, rgba(255, 255, 255, 0.00) 100%);
+  }
+
+  .product__slider-slides img {
+    @apply w-[110px] h-16 rounded-lg border border-slate-300
+  }
 }
