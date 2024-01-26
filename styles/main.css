@@ -23,7 +23,7 @@
 @layer components {
 
   .btn {
-    @apply rounded-md flex items-center gap-2 transition duration-300
+    @apply rounded-md flex items-center justify-center gap-2 transition duration-300
   }
 
   .btn-primery {
@@ -122,15 +122,20 @@
 
   /* single product */
   .product {
-    @apply p-4 bg-white rounded-md
+    @apply flex flex-col gap-4 w-full max-w-[882px];
+  }
+  .product__slider,
+  .product__info,
+  .product__vendor {
+    @apply p-4 bg-white rounded-2xl
   }
 
   .product__slider-img {
-    @apply relative h-[481px] rounded-md overflow-hidden
+    @apply relative h-[481px] rounded-2xl overflow-hidden
   }
 
   .product__slider-slides {
-    @apply mt-5 relative flex items-center gap-3 overflow-x-scroll cursor-grab active:cursor-grabbing;
+    @apply mt-5 relative flex items-center gap-3 overflow-x-scroll;
   }
 
   .product__slider-slides::-webkit-scrollbar {
@@ -154,5 +159,96 @@
 
   .product__slider-slides img {
     @apply w-[110px] h-16 rounded-lg border border-slate-300
+  }
+
+  .product__slider-info__category {
+    @apply flex items-center gap-2
+  }
+
+  .product__slider-info__category p {
+    @apply text-sm text-gray-300
+  }
+
+  .product__slider-info__category span {
+    @apply w-2 h-2 rounded-full bg-blue-400
+  }
+
+  .product__slider-info h3 {
+    @apply text-xl text-black font-bold mt-2
+  }
+
+  .product__slider-info__tabs {
+    @apply flex items-center gap-4 mt-4
+  }
+
+  .product__slider-info__tabs span {
+    @apply py-1 px-2 rounded-md bg-gray-300 text-sm text-gray-500
+  }
+
+  .product__slider-price {
+    @apply flex items-end justify-between mt-6
+  }
+  
+  .product__slider-price p {
+    @apply flex items-end gap-2 text-[28px] leading-9 text-black font-bold
+  }
+
+  .product__slider-price button {
+    @apply py-[10px] px-7 rounded-lg bg-blue-500 hover:bg-blue-600 transition duration-300 flex items-center gap-2 text-sm text-white
+  }
+  
+  .product__info,
+  .product__vendor {
+    @apply flex flex-col gap-3
+  }
+
+  .product__info h3,
+  .product__vendor h3 {
+    @apply text-2xl text-black font-bold
+  }
+
+  .product__info p {
+    @apply text-base text-black
+  }
+
+  .product__vendor-contacts {
+    @apply flex items-end justify-between flex-wrap gap-y-2
+  }
+
+  .product__vendor-contacts a {
+    @apply text-base text-black font-semibold
+  }
+
+  .product__vendor-contacts__info {
+    @apply h-12 flex flex-col flex-wrap gap-x-4 gap-y-[2px]
+  }
+
+  .product__vendor-contacts__info img {
+    @apply w-12 h-full rounded-lg
+  }
+
+  .product__vendor-contacts__info h4 {
+    @apply text-base text-black font-semibold
+  }
+
+  .product__vendor-contacts__info span {
+    @apply text-xs text-gray-400 mt-0.5
+  }
+
+  /* aside vendors */
+  aside .product__vendor {
+    @apply items-stretch p-4 gap-4
+  }
+
+  aside .product__vendor-contacts {
+    @apply flex-col items-stretch 
+  }
+
+  aside .product__vendor-contacts__info {
+    @apply h-10 gap-x-3
+  }
+
+  aside .product__vendor-contacts__info img {
+    @apply w-10
   }
 }
