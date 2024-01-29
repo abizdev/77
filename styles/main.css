@@ -10,6 +10,16 @@
     font-family: 'inter';
     font-weight: 400;
   }
+  *::before,
+  *::after {
+    font-family: 'icon';
+    font-weight: 400;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   a {
     text-decoration: none;
@@ -51,29 +61,27 @@
   }
 
   /* categories */
-  .categories__item {
-    @apply relative item-border rounded-xl pr-3 pl-11 py-[22px] flex items-center justify-end gap-6 shadow-md w-[336px] cursor-pointer
+  .categories__item.active {
+    @apply border-blue-400
   }
 
-  .categories__item--img {
-    @apply absolute top-[50%] -left-9 -translate-y-[50%] w-16 h-16 item-border rounded-xl flex items-center justify-center shadow-md
+  .categories__item.active .categories__item--img {
+    @apply bg-blue-500 
+  }
+  
+  .categories__item.active button {
+    @apply rotate-90 before:text-blue-400
   }
 
-  .categories__item--info {
-    @apply flex flex-col flex-grow gap-1
-  }
-
-  .categories__item--info h4 {
-    @apply text-base/[119%] font-semibold
-  }
-  .categories__item--info p {
-    @apply text-sm text-gray-300
+  .categories__item.active ~ .dropdown {
+    @apply grid
   }
 
   /* product card */
   .product-card {
     @apply relative bg-white border-2 border-white rounded-xl overflow-hidden cursor-pointer hover:shadow-md transition duration-300
   }
+  
   .product-card:hover .product-card__info-name {
     @apply text-blue-400
   }
@@ -253,6 +261,20 @@
     @apply w-10
   }
 }
+
+/* icons classes */
+.icon-chevron-left::before { content: '\f053'!important; }
+.icon-chevron-right::before { content: '\f054'!important; }
+.icon-chevron-down::before { content: '\f078'!important; }
+.icon-chevron-double-down::before { content: '\f322'!important; }
+.icon-phone::before { content: '\f095'!important; }
+.icon-search::before { content: '\f002'!important; }
+.icon-heart::before { content: '\f004'!important; }
+.icon-login::before { content: '\f08b'!important; }
+.icon-location::before { content: '\f3c5'!important; }
+.icon-cloud-download::before { content: '\f0ed'!important; }
+
+
 .custom-checkbox {
   position: relative;
   width: 24px;
