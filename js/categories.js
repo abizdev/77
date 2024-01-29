@@ -168,7 +168,7 @@ categories.forEach((category, index) => {
 })
 
 const dropdown = `
-<div class="dropdown col-span-3 w-full grid grid-cols-3 gap-x-3 gap-y-6 p-5 bg-white border border-slate-200 rounded-2xl">
+<div class="dropdown col-span-3 w-full grid grid-cols-1 md:grid-cols-3 gap-x-3 gap-y-6 p-5 bg-white border border-slate-200 rounded-2xl">
   <a href="#!" class="dropdown__item icon-chevron-right p-3 flex flex-row-reverse items-center gap-[10px]">
     <h5 class="flex-grow text-sm text-black font-medium">Смартфоны</h5>
   </a>
