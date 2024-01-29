@@ -175,7 +175,7 @@ const dropdown = `
 </div>
 `
 
-
+  
 const categoriesItems = document.querySelectorAll('.categories__item')
 
 categoriesItems.forEach((item, index) => {
