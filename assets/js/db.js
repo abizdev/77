@@ -1,6 +1,4 @@
-const categoriesContent = document.querySelector(".categories__content");
-const dropdownContainer = document.querySelector(".dropdown");
-const categories = [
+export const categories = [
   {
     imgUrl: "assets/images/categories/category1.svg",
     title: "Для женщин",
@@ -144,104 +142,137 @@ const categories = [
     text: "4 147 объявлений",
   },
 ];
-
-// categories template
-const getCategoryTemplate = (category, index) => {
-  return `
-  <!-- categories-item -->
-  <article class="categories__item h-[85px] relative item-border rounded-xl pr-3 pl-11 py-[22px] flex items-center justify-end gap-6 shadow-md w-[336px] cursor-pointer">
-                
-    <div class="categories__item--img absolute top-[50%] -left-9 -translate-y-[50%] w-16 h-16 item-border rounded-xl flex items-center justify-center shadow-md transition duration-300">
-      <img src="${category.imgUrl}" alt="category">
-    </div>
-
-    <div class="categories__item--info flex flex-col flex-grow gap-1">
-      <h4 class="text-base/[119%] font-semibold">${category.title}</h4>
-      <p class="text-sm text-gray-300">${category.text}</p>
-    </div>
-
-    <button class="icon-chevron-right transition duration-300 before:text-slate-300"></button>
-
-  </article>
-  `;
-};
-// dropdown template
-const getDropdownTemplate = (subcategories) => {
-  if (!subcategories) {
-    dropdownContainer.classList.replace('dropdown-grid', 'dropdown-flex')
-    dropdownContainer.innerHTML +=  `
-    <img src="assets/images/empty-category.png" alt="empty-category" />
-    <h4 class="text-lg/[140%] text-black">Подкатегорий нет</h4>
-    <p class="text-sm text-gray-400 mt-1">В этой категории нет подкатегорий</p>
-    `;
-    return
-  }
-  
-  subcategories.forEach((item) => {
-    dropdownContainer.classList.replace('dropdown-flex', 'dropdown-grid')
-    dropdownContainer.innerHTML += `
-    <a href="${item.linkUrl}" class="dropdown__item icon-chevron-right p-3 flex flex-row-reverse items-center gap-[10px]">
-      <h5 class="flex-grow text-sm text-black font-medium">${item.title}</h5>
-    </a>
-    `;
-  });
-};
-
-// toggle item visibility functions
-const showEl = (el, display = 'hidden') => {
-  el.classList.remove('hidden')
-
-  if(display) {
-    el.classList.add(display)
-  }
-}
-const hideEl = (el, display = 'hidden') => {
-  if(display) {
-    el.classList.remove(...display)
-  }
-  el.classList.add('hidden')
-}
-
-categories.forEach((category, index) => {
-  categoriesContent.insertAdjacentHTML(
-    "beforeend",
-    getCategoryTemplate(category, index)
-  );
-});
-
-const setDropdownPosition = (category, index) => {
-  const dropdownGridRow = Math.floor(index / 3) + 2;
-  dropdownContainer.style.gridRow = dropdownGridRow
-  
-  showEl(dropdownContainer, 'dropdown-grid')
-
-  getDropdownTemplate(category?.subcategory);
-
-};
-
-const categoriesItems = document.querySelectorAll(".categories__item");
-
-categoriesItems.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    // check if item contains active
-    if (item.classList.contains("active")) {
-      item.classList.remove("active");
-
-      dropdownContainer.innerHTML = '';
-
-      hideEl(dropdownContainer, ['dropdown-grid', 'dropdown-flex']);
-    } else {
-      // remove active from all categories items and dropdown then add to clicked item
-      categoriesItems.forEach((item) => {
-        item.classList.remove("active");
-
-        dropdownContainer.innerHTML = ''
-
-        hideEl(dropdownContainer, ['dropdown-grid', 'dropdown-flex'])
-      });
-
-      item.classList.toggle("active");
-      setDropdownPosition(categories[index], index);
-    }
-  });
-});
+export const productsArr = [
+  {
+    id: Math.random(),
+    imgUrl: '../assets/images/products/card1.jpg',
+    isLiked: false,
+    city: 'г. Ташкент',
+    name: 'Кепки Corneliani Diamond for him edition.',
+    productUrl: '../../pages/product.html',
+    date: 'Вчера, 19:20',
+    phone: '+998712007007',
+    price: 2599000,
+  },
+  {
+    id: Math.random(),
+    imgUrl: '../assets/images/products/card2.jpg',
+    isLiked: false,
+    city: 'г. Самарканд',
+    name: 'Chevrolet Onix 1.2 Turbo в наличии',
+    productUrl: '../../pages/product.html',
+    date: 'Вчера, 19:20',
+    phone: '+998712007007',
+    price: 204000000
+  },
+  {
+    id: Math.random(),
+    imgUrl: '../assets/images/products/card3.jpg',
+    isLiked: false,
+    city: 'г. Ташкент',
+    name: '7Saber Trucker Cap',
+    productUrl: '../../pages/product.html',
+    date: 'Вчера, 19:20',
+    phone: '+998712007007',
+    price: 280000
+  },
+  {
+    id: Math.random(),
+    imgUrl: '../assets/images/products/card4.jpg',
+    isLiked: false,
+    city: 'г. Ташкент',
+    name: 'Оригинальные кроссовки Nike Air Max Plus',
+    productUrl: '../../pages/product.html',
+    date: 'Вчера, 19:20',
+    phone: '+998712007007',
+    price: 4820000
+  },
+  {
+    id: Math.random(),
+    imgUrl: '../assets/images/products/card5.jpg',
+    isLiked: false,
+    city: 'г. Ташкент',
+    name: 'Оригинальные кроссовки Nike Air Max 97',
+    productUrl: '../../pages/product.html',
+    date: 'Вчера, 19:20',
+    phone: '+998712007007',
+    price: 4820000
+  },
+  {
+    id: Math.random(),
+    imgUrl: '../assets/images/products/card6.jpg',
+    isLiked: false,
+    city: 'г. Ташкент',
+    name: 'Apple Watch Series 8 - USA Non active',
+    productUrl: '../../pages/product.html',
+    date: 'Вчера, 19:20',
+    phone: '+998712007007',
+    price: 4500000
+  },
+  {
+    id: Math.random(),
+    imgUrl: '../assets/images/products/card7.jpg',
+    isLiked: false,
+    city: 'г. Самарканд',
+    name: 'Лучший кроссовер Geely Monjaro Limited Edition',
+    productUrl: '../../pages/product.html',
+    date: 'Вчера, 19:20',
+    phone: '+998712007007',
+    price: 320000000
+  },
+  {
+    id: Math.random(),
+    imgUrl: '../assets/images/products/card8.jpg',
+    isLiked: false,
+    city: 'г. Ташкент',
+    name: 'Стайлер для волос Dyson airwrap complete long',
+    productUrl: '../../pages/product.html',
+    date: 'Вчера, 19:20',
+    phone: '+998712007007',
+    price: 500
+  },
+  {
+    id: Math.random(),
+    imgUrl: '../assets/images/products/card1.jpg',
+    isLiked: false,
+    city: 'г. Ташкент',
+    name: 'Кепки Corneliani Diamond for him edition.',
+    productUrl: '../../pages/product.html',
+    date: 'Вчера, 19:20',
+    phone: '+998712007007',
+    price: 2599000
+  },
+  {
+    id: Math.random(),
+    imgUrl: '../assets/images/products/card2.jpg',
+    isLiked: false,
+    city: 'г. Самарканд',
+    name: 'Chevrolet Onix 1.2 Turbo в наличии',
+    productUrl: '../../pages/product.html',
+    date: 'Вчера, 19:20',
+    phone: '+998712007007',
+    price: 204000000
+  },
+  {
+    id: Math.random(),
+    imgUrl: '../assets/images/products/card3.jpg',
+    isLiked: false,
+    city: 'г. Ташкент',
+    name: '7Saber Trucker Cap',
+    productUrl: '../../pages/product.html',
+    date: 'Вчера, 19:20',
+    phone: '+998712007007',
+    price: 280000
+  },
+  {
+    id: Math.random(),
+    imgUrl: '../assets/images/products/card4.jpg',
+    isLiked: false,
+    city: 'г. Ташкент',
+    name: 'Оригинальные кроссовки Nike Air Max Plus',
+    productUrl: '../../pages/product.html',
+    date: 'Вчера, 19:20',
+    phone: '+998712007007',
+    price: 4820000
+  },
+]
