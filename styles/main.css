@@ -68,6 +68,12 @@
   .categories__item.active .categories__item--img {
     @apply bg-blue-500 
   }
+  .categories__item .categories__item--img img {
+    filter: invert(44%) sepia(91%) saturate(1555%) hue-rotate(193deg) brightness(100%) contrast(91%);
+  }
+  .categories__item.active .categories__item--img img {
+    filter: invert(100%) sepia(1%) saturate(7497%) hue-rotate(60deg) brightness(103%) contrast(100%);
+  }
   
   .categories__item.active button {
     @apply rotate-90 before:text-blue-400
@@ -259,6 +265,14 @@
 
   aside .product__vendor-contacts__info img {
     @apply w-10
+  }
+
+  /* dropdown */
+  .dropdown.dropdown-grid {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-x-3 gap-y-6 p-5
+  }
+  .dropdown.dropdown-flex {
+    @apply flex flex-col items-center justify-center
   }
 }
 

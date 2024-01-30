@@ -18,12 +18,12 @@ const header = `
           <img src="assets/images/ru-lang.png" alt="lang">
           <span class="text-sm font-medium uppercase md:hidden">Ру</span>
 
-          <div className="lang-dropdown absolute top-[10px] left-[15px] shadow-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white rounded-lg pl-4 transition duration-300">
-            <div className="lang-dropdown__item flex items-center gap-2">
+          <div class="lang-dropdown absolute top-[10px] left-[15px] shadow-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white rounded-lg pl-4 transition duration-300">
+            <div class="lang-dropdown__item flex items-center gap-2">
               <img src="assets/images/ru-lang.png" alt="ru-lang" />
               <span class="text-sm font-medium py-[11px] border-b border-slate-300">Русский</span>
             </div>
-            <div className="lang-dropdown__item flex items-center gap-2">
+            <div class="lang-dropdown__item flex items-center gap-2">
               <img src="assets/images/uz-lang.png" alt="uz-lang" />
               <span class="text-sm font-medium py-[11px]">O’zbekcha</span>
             </div>
