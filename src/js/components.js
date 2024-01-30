@@ -14,16 +14,16 @@ const header = `
 
         <div class="cursor-pointer relative icon-chevron-down group before:text-black before:w-6 before:h-6 text-sm/[130%] text-bold text-black flex flex-row-reverse items-center gap-1 hover:before:rotate-180 hover:before:text-blue-400 before:transition before:duration-300">
           <span class="text-sm font-medium hidden md:block">Русский</span>
-          <img src="/assets/images/ru-lang.png" alt="lang">
+          <img src="/public/images/ru-lang.png" alt="lang">
           <span class="text-sm font-medium uppercase md:hidden">Ру</span>
 
           <div class="lang-dropdown absolute top-[10px] left-[15px] shadow-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white rounded-lg pl-4 transition duration-300">
             <div class="lang-dropdown__item flex items-center gap-2">
-              <img src="/assets/images/ru-lang.png" alt="ru-lang" />
+              <img src="/public/images/ru-lang.png" alt="ru-lang" />
               <span class="text-sm font-medium py-[11px] border-b border-slate-300">Русский</span>
             </div>
             <div class="lang-dropdown__item flex items-center gap-2">
-              <img src="/assets/images/uz-lang.png" alt="uz-lang" />
+              <img src="/public/images/uz-lang.png" alt="uz-lang" />
               <span class="text-sm font-medium py-[11px]">O’zbekcha</span>
             </div>
           </div>
@@ -37,7 +37,7 @@ const header = `
 
       <!-- header logo -->
       <a href="#!" class="absolute left-[50%] -translate-x-[50%] translate-y-4 md:translate-y-3 px-3.5 p-3 md:py-4 bg-white border border-gray-200 rounded-[20px] md:rounded-b-[20px] md:rounded-t-none shadow-lg">
-        <img src="/assets/images/logo.png" class="w-24 md:w-full" alt="logo">
+        <img src="/public/images/logo.png" class="w-24 md:w-full" alt="logo">
       </a>
 
       <!-- header links -->
@@ -62,12 +62,12 @@ const footer = `
 <!-- footer -->
 <footer class="w-full relative md:h-64 bg-white">
   <!-- footer background image -->
-  <img src="assets/images/footer-bg.png" class="rounded-[10px] absolute top-0 left-0 w-full h-full object-cover" alt="footer-bg">
+  <img src="/public/images/footer-bg.png" class="rounded-[10px] absolute top-0 left-0 w-full h-full object-cover" alt="footer-bg">
 
   <!-- footer content -->
   <div class="container relative flex flex-col h-full pt-14 pb-6 md:p-0 items-center justify-center text-center">
 
-    <img src="assets/images/logo.png" class="w-[122px] absolute top-0 left-[47.5%] -translate-y-[50%] -translate-x-7 shadow-blue" alt="logo">
+    <img src="/public/images/logo.png" class="w-[122px] absolute top-0 left-[47.5%] -translate-y-[50%] -translate-x-7 shadow-blue" alt="logo">
 
     <p class="text-sm md:text-base text-black max-w-[662px] w-full">77.uz marketplace - это виртуальная платформа в Узбекистане, которая облегчает покупки и продажи, связывая продавцов с потенциальными клиентами.</p>
 
@@ -76,17 +76,17 @@ const footer = `
       <ul class="flex flex-wrap items-center justify-center md:justify-center gap-4 md:gap-[50px]">
 
         <li class="flex items-center gap-1">
-          <img src="assets/images/footer-symbol.svg" alt="symbol">
+          <img src="/public/images/footer-symbol.svg" alt="symbol">
           <a href="#!" class="text-xl text-black font-semibold ">Доска объявлений</a>
         </li>
 
         <li class="flex items-center gap-1">
-          <img src="assets/images/footer-symbol.svg" alt="symbol">
+          <img src="/public/images/footer-symbol.svg" alt="symbol">
           <a href="#!" class="text-xl text-black font-semibold ">Условия пользования</a>
         </li>
 
         <li class="flex items-center gap-1">
-          <img src="assets/images/footer-symbol.svg" alt="symbol">
+          <img src="/public/images/footer-symbol.svg" alt="symbol">
           <a href="tel:+998885005000" class="text-xl text-black font-semibold ">+998 88 500 50 00</a>
         </li>
 
@@ -102,8 +102,8 @@ const footer = `
       <p class="text-sm/[114%] text-black">© 77.uz 2023. Все права защищены</p>
 
       <a href="https://uic.group/" class="flex items-center gap-2 group">
-        <img src="assets/images/uic-logo.svg" alt="uic-logo">
-        <img src="assets/images/uic-logo-text.svg" class="hidden md:flex opacity-0 translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition duration-300" alt="uic-logo">
+        <img src="/public/images/uic-logo.svg" alt="uic-logo">
+        <img src="/public/images/uic-logo-text.svg" class="hidden md:flex opacity-0 translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition duration-300" alt="uic-logo">
       </a>
     </div>
   </div>
@@ -114,5 +114,3 @@ const footer = `
 
 body.insertAdjacentHTML('beforebegin', header)
 body.insertAdjacentHTML('beforeend', footer)
-
-alert('foo')

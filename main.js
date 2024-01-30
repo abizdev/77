@@ -1,3 +1,3 @@
-import "./assets/js/components.js"
-import './assets/js/categories.js'
-import './assets/js/products.js'
+import "./src/js/components.js"
+import './src/js/categories.js'
+import './src/js/products.js'

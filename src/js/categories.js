@@ -28,7 +28,7 @@ const getDropdownTemplate = (subcategories) => {
   if (!subcategories) {
     dropdownContainer.classList.replace('dropdown-grid', 'dropdown-flex')
     dropdownContainer.innerHTML +=  `
-    <img src="assets/images/empty-category.png" alt="empty-category" />
+    <img src="/public/images/empty-category.png" alt="empty-category" />
     <h4 class="text-lg/[140%] text-black">Подкатегорий нет</h4>
     <p class="text-sm text-gray-400 mt-1">В этой категории нет подкатегорий</p>
     `;

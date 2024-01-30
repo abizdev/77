@@ -1,6 +1,7 @@
 import { productsArr } from "./db";
 
 const adsContent = document.querySelector(".ads__content");
+const categoriesProducts = document.querySelector(".categories__products")
 
 // product card
 const getProductCardTemplate = (product) => {
@@ -13,7 +14,7 @@ const getProductCardTemplate = (product) => {
     
     <div class="product-card__info">
       <span class="product-card__info-city">${product.city}</span>
-      <a href="product.html" class="product-card__info-name">${product.name}</a>
+      <a href="${product.productUrl}" class="product-card__info-name">${product.name}</a>
       <time class="product-card__info-date">${product.date}</time>
       <a href="tel:${product.phone}" class="product-card__info-phone">${product.phone}</a>
       <p class="product-card__info-price">${product.price} <span>UZS</span></p>
@@ -25,4 +26,5 @@ const getProductCardTemplate = (product) => {
 
 productsArr.forEach((product) => {
   adsContent.insertAdjacentHTML("beforeend", getProductCardTemplate(product));
+  categoriesProducts.insertAdjacentHTML("beforeend", getProductCardTemplate(product));
 });
