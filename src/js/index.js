@@ -1,5 +1,5 @@
 import { searchCategories } from "./db";
-
+import { searchItemTemplate } from "./templates";
 
 const body = document.querySelector('body')
 
@@ -10,16 +10,6 @@ const searchForm = document.querySelector('.search-form')
 const searchInput = document.querySelector('.search-form input')
 const searchPopup= document.querySelector('.sear-form__popup')
 
-
-const searchItemTemplate = (item) => {
-  return `
-    <!-- search item -->
-    <div class="search-form__items-item bg-white p-4 flex items-center justify-between gap-2 icon-star before:text-xl before:w-6 before:h-6 before:text-yellow-500 hover:bg-slate-100 transition duration-300 cursor-pointer">
-      <p class="flex-grow text-base text-black font-medium">${item.title}</p>
-      <a href="${item.linkUrl}" class="icon-chevron-right"></a>
-    </div>
-  `
-}
 
 // search click
 searchWrapper.addEventListener('click', (event) => {
