@@ -26,5 +26,5 @@ const getProductCardTemplate = (product) => {
 
 productsArr.forEach((product) => {
   adsContent.insertAdjacentHTML("beforeend", getProductCardTemplate(product));
-  categoriesProducts.insertAdjacentHTML("beforeend", getProductCardTemplate(product));
+  // categoriesProducts.insertAdjacentHTML("beforeend", getProductCardTemplate(product));
 });

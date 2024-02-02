@@ -1,3 +1,40 @@
+export const searchCategories = [
+  {
+    title: 'Холодильники',
+    saved: false,
+    linkUrl: '#!'
+  },
+  {
+    title: 'Телевизоры',
+    saved: false,
+    linkUrl: '#!'
+  },
+  {
+    title: 'Наушники и аксессуары',
+    saved: false,
+    linkUrl: '#!'
+  },
+  {
+    title: 'Кухонная мебель',
+    saved: false,
+    linkUrl: '#!'
+  },
+  {
+    title: 'Телефоны',
+    saved: false,
+    linkUrl: '#!'
+  },
+  {
+    title: 'Бытовая техника',
+    saved: false,
+    linkUrl: '#!'
+  },
+  {
+    title: 'Микроволновки',
+    saved: false,
+    linkUrl: '#!'
+  },
+]
 export const categories = [
   {
     imgUrl: "/public/images/categories/category1.svg",

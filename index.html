@@ -11,16 +11,30 @@
   <body class="bg-gray-100">
 
     <!-- main -->
-    <main class="main bg-white mt-[76px]">
+    <main class="main bg-white mt-[76px] border border-transparent flex flex-col ">
       <!-- search form -->
-      <form class="search-form icon-search before:text-gray-300 self-center max-w-[580px] w-[90%] m-auto flex items-center gap-2 p-2 -translate-y-2/4 item-border rounded-lg">
-        <input type="text" placeholder="Что вы ищите?" class="w-full h-full outline-none">
-        <button class="btn btn-primery">Поиск</button>
-      </form>
+      <div class="search-wrapper flex flex-col gap-2 -mt-9 self-center max-w-[580px] w-[90%] m-auto absolute z-0">
+        <!-- form -->
+        <form class="search-form flex items-center gap-2 p-2 item-border rounded-lg icon-search before:text-xl before:text-gray-300">
+          <input type="text" placeholder="Что вы ищите?" class="w-full h-[50px] outline-none ">
+          <button class="btn btn-primery hover:bg-gray-500">Поиск</button>
+        </form>
+
+        <!-- form popup -->
+        <div class="sear-form__popup item-border overflow-hidden hidden flex-col rounded-xl ">
+          <h4 class="text-sm text-gray-300 font-medium p-4 pb-3">История поиска</h4>
+          <!-- search items -->
+          <div class="search-form__items flex flex-col">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="form-bg fixed top-0 left-0 w-full h-full bg-black/[0.4] invisible opacity-0 z-50 transition duration-300"></div>
       <!-- search form end -->
 
       <!-- categories -->
-      <section class="categories pb-6">
+      <section class="categories pb-6 pt-[54px]">
 
         <div class="section__heading">
           <h2>Категории</h2>
@@ -29,8 +43,8 @@
 
         <div class="container">
           <!-- categories content -->
-          <div class="categories__content w-full mt-10 grid place-items-end grid-cols-3 xl:justify-between gap-y-5 gap-x-10">
-            <div class="dropdown col-span-3 w-full hidden md:h-[212px] bg-white border border-slate-200 rounded-2xl p-5"></div>
+          <div class="categories__content w-full mt-10 grid place-items-end grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xl:justify-between gap-y-5 gap-x-10">
+            <div class="dropdown col-span-1 md:col-span-2 xl:col-span-3 w-full hidden md:h-[212px] bg-white border border-slate-200 rounded-2xl p-5"></div>
           </div>
           <!-- categories content end -->
         </div>

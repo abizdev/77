@@ -7,7 +7,7 @@ const dropdownContainer = document.querySelector(".dropdown");
 const getCategoryTemplate = (category, index) => {
   return `
   <!-- categories-item -->
-  <article class="categories__item h-[85px] relative item-border rounded-xl pr-3 pl-11 py-[22px] flex items-center justify-end gap-6 shadow-md w-[336px] cursor-pointer">
+  <article class="categories__item h-[85px] relative item-border rounded-xl pr-3 pl-11 py-[22px] flex items-center justify-end gap-6 shadow-md col-span-1 w-11/12 xl:w-[336px] w-full cursor-pointer">
                 
     <div class="categories__item--img absolute top-[50%] -left-9 -translate-y-[50%] w-16 h-16 item-border rounded-xl flex items-center justify-center shadow-md transition duration-300">
       <img src="${category.imgUrl}" alt="category">

@@ -17,14 +17,14 @@ const header = `
           <img src="/public/images/ru-lang.png" alt="lang">
           <span class="text-sm font-medium uppercase md:hidden">Ру</span>
 
-          <div class="lang-dropdown absolute top-[10px] left-[15px] shadow-sm opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white rounded-lg pl-4 transition duration-300">
+          <div class="lang-dropdown absolute top-[25px] left-[15px] w-[151px] shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white rounded-lg pl-4 transition duration-300">
             <div class="lang-dropdown__item flex items-center gap-2">
               <img src="/public/images/ru-lang.png" alt="ru-lang" />
-              <span class="text-sm font-medium py-[11px] border-b border-slate-300">Русский</span>
+              <span class="flex-grow text-sm font-medium py-[11px] border-b border-slate-300">Русский</span>
             </div>
             <div class="lang-dropdown__item flex items-center gap-2">
               <img src="/public/images/uz-lang.png" alt="uz-lang" />
-              <span class="text-sm font-medium py-[11px]">O’zbekcha</span>
+              <span class="flex-grow text-sm font-medium py-[11px]">O’zbekcha</span>
             </div>
           </div>
         </div>

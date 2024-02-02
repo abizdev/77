@@ -287,6 +287,7 @@
 .icon-login::before { content: '\f08b'!important; }
 .icon-location::before { content: '\f3c5'!important; }
 .icon-cloud-download::before { content: '\f0ed'!important; }
+.icon-star::before { content: '\f005' !important; }
 
 
 .custom-checkbox {
