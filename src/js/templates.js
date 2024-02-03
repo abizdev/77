@@ -146,10 +146,10 @@ export const getCategoryTemplate = (category, index) => {
 };
 
 // dropdown template
-export const getDropdownTemplate = (subcategories) => {
+export const getDropdownTemplate = (el, subcategories) => {
   if (!subcategories) {
-    dropdownContainer.classList.replace('dropdown-grid', 'dropdown-flex')
-    dropdownContainer.innerHTML +=  `
+    el.classList.replace('dropdown-grid', 'dropdown-flex')
+    el.innerHTML +=  `
     <img src="/public/images/empty-category.png" alt="empty-category" />
     <h4 class="text-lg/[140%] text-black">Подкатегорий нет</h4>
     <p class="text-sm text-gray-400 mt-1">В этой категории нет подкатегорий</p>
@@ -158,8 +158,8 @@ export const getDropdownTemplate = (subcategories) => {
   }
 
   subcategories.forEach((item) => {
-    dropdownContainer.classList.replace('dropdown-flex', 'dropdown-grid')
-    dropdownContainer.innerHTML += `
+    el.classList.replace('dropdown-flex', 'dropdown-grid')
+    el.innerHTML += `
     <a href="${item.linkUrl}" class="dropdown__item icon-chevron-right p-3 flex flex-row-reverse items-center gap-[10px]">
       <h5 class="flex-grow text-sm text-black font-medium">${item.title}</h5>
     </a>

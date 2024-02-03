@@ -32,7 +32,7 @@ const setDropdownPosition = (category, index) => {
   
   showEl(dropdownContainer, 'dropdown-grid')
 
-  getDropdownTemplate(category?.subcategory);
+  getDropdownTemplate(dropdownContainer, category?.subcategory);
 
 };
 
