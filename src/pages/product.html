@@ -1,163 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>77 Store</title>
-    <link rel="stylesheet" href="../assets/styles/fonts.css">
-    <link rel="stylesheet" href="../assets/styles/main.css">
-    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
-  </head>
-  <body class="bg-gray-100">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>77 Store</title>
+  <link rel="stylesheet" href="../assets/styles/fonts.css">
+  <link rel="stylesheet" href="../assets/styles/main.css">
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+</head>
+<body class="bg-gray-100">
 
-    <!-- main -->
-    <main>
-      <!-- pages navigation -->
-      <div class="container flex items-center gap-[6px] mt-5 p-3">
-        <a href="#!" class="text-sm/[130%] text-black font-medium">Главная</a>
-        <span class="w-1 h-1 bg-gray-200 rounded-full"></span>
-        <a href="#!" class="text-sm/[130%] text-gray-200 font-medium">Рестораны и кафе</a>
-      </div>
-      <!-- pages navigation end -->
+<!-- main -->
+<main>
+  <!-- pages navigation -->
+  <div class="container flex items-center gap-[6px] mt-5 p-3">
+    <a href="#!" class="text-sm/[130%] text-black font-medium">Главная</a>
+    <span class="w-1 h-1 bg-gray-200 rounded-full"></span>
+    <a href="#!" class="text-sm/[130%] text-gray-200 font-medium">Рестораны и кафе</a>
+  </div>
+  <!-- pages navigation end -->
 
-      <div class="container mt-6 flex flex-wrap mb-[91px] xl:mb-40 xl:flex-nowrap gap-6">
-        <!-- main content -->
-        <section class="product">
+  <div class="container mt-6 flex flex-col flex-wrap mb-[91px] xl:mb-40 xl:flex-row xl:flex-nowrap gap-6">
+    <!-- main content -->
+    <section class="product">
 
-          <div class="product__slider">
-            <!-- slider main img -->
-            <div class="product__slider-img">
-              <!-- slide prev btn -->
-              <button class="product__slider-btn right-6 icon-chevron-right"></button>
-              
-              <img src="/images/single-product/main.jpg" class="w-full h-full object-cover" alt="main-slide">
+      <div class="product__slider">
+        <!-- swiper -->
+        <div class="swiper relative">
+          <div class="swiper-wrapper">
 
-              <!-- slide next btn -->
-              <button class="product__slider-btn left-6 icon-chevron-left"></button>
+          </div>
+
+            <!-- slider navigation btns -->
+            <div class="swiper-navigation h-10 absolute top-[50%] left-0 -translate-y-[50%] w-full flex justify-between items-center">
+              <button class="product__slider-btn swiper-button-prev left-6 icon-chevron-left before:text-slate-200 hover:before:text-white transition duration-300"></button>
+              <button class="product__slider-btn swiper-button-next right-6 icon-chevron-right before:text-slate-200 hover:before:text-white transition duration-300"></button>
             </div>
-            
+            <!-- slider navigation btns end -->
+
             <!-- slider slides images -->
-            <div class="product__slider-slides">
-              <img src="/images/single-product/slide1.jpg" alt="slide">
-              <img src="/images/single-product/slide2.jpg" alt="slide">
-              <img src="/images/single-product/slide3.jpg" alt="slide">
-              <img src="/images/single-product/slide4.jpg" alt="slide">
-              <img src="/images/single-product/slide5.jpg" alt="slide">
-              <img src="/images/single-product/slide6.jpg" alt="slide">
-              <img src="/images/single-product/slide7.jpg" alt="slide">
-            </div>
+            <div class="product__slider-slides swiper-pagination h-16"></div>
+            <!-- slider slides images end -->
+        </div>
+        <!-- swiper end -->
 
-            <div class="product__slider-info mt-6">
-              <!-- product catetgory -->
-              <div class="product__slider-info__category">
-                <p>Электроника</p>
-                <span></span>
-                <p>Фены</p>
-              </div>
-
-              <h3>Стайлер для волос Dyson Airwrap Complete Long в цветe Vinca blue и Rose</h3>
-
-              <div class="product__slider-info__tabs">
-                <span>Вчера, 19:20</span>
-                <span>г. Самарканд</span>
-              </div>
-
-              <div class="product__slider-price">
-                <!-- price -->
-                <p>6 520 000 <span class="text-lg text-blue-400">UZS</span></p>
-
-                <button class="">
-                  <img src="/images/icons/phone-white.svg" alt="phone">
-                  +998 71 200 70 07
-                </button>
-              </div>
-            </div>
+        <!-- slider bottom info -->
+        <div class="product__slider-info mt-6">
+          <!-- product catetgory -->
+          <div class="product__slider-info__category">
+            <p>Электроника</p>
+            <span></span>
+            <p>Фены</p>
           </div>
 
-          <div class="product__info">
-            <h3>Описание</h3>
+          <h3>Стайлер для волос Dyson Airwrap Complete Long в цветe Vinca blue и Rose</h3>
 
-            <p>Мультистайлер Dyson Airwrap Complete Long в цветe Vinca blue и Rose Бесплатная доставка по ТАШКЕНТУ!!! 100% оригинал С новыми цилиндрами для завивки и волнения в обоих направлениях, щетками для контроля и придания формы, а также многофункциональной сушилкой для разглаживания Coanda для сушки,разглаживания и сокрытия разлетающихся волос 3 В комплектацию входят 30-мм цилиндрические насадки Airwrap для завивки, 40-мм цилиндрические насадки Airwrap для завивки</p>
-
-            <p>Круглая щетка для создания объема, Мягкая щетка для выпрямления, Жесткая щетка для выпрямление Особенности фена В комплекте Чехол для хранения Термостойкий коврик Щетка для очистки Для длинных до груди или более длинных волос. Пoдxoдит для разных типoв вoлoc.</p>
-
-            <p>Сoздaние лoконoв и волн. Pазглаживaниe. Высушивaние вoлос. Без экстpeмальныx тeмперaтур. В последней версии 2022 Года появились новые насадки, такие как: - обновлённый цилиндр для завивки, предусматривающий поток воздуха в двух направлениях, то есть больше не нужно переставлять насадки. По вопросам пишите в телеграм на номер</p>
-          </div>
-          
-          <div class="product__vendor">
-            <h3>Продавец</h3>
-            <div class="product__vendor-contacts">
-              <!-- vendor info -->
-              <div class="product__vendor-contacts__info">
-                <img src="/images/vendor.jpg" alt="vendor">
-                <h4>Малика Абдурахимова</h4>
-                <span>ID: 1326547</span>
-              </div>
-
-              <!-- vendor phone -->
-              <a href="tel:+998712007007">+998 71 200 70 07</a>
-            </div>
+          <div class="product__slider-info__tabs">
+            <span>Вчера, 19:20</span>
+            <span>г. Самарканд</span>
           </div>
 
-        </section>
-        <!-- main content end-->
+          <div class="product__slider-price">
+            <!-- price -->
+            <p>6 520 000 <span class="text-lg text-blue-400">UZS</span></p>
 
-        <aside class="flex flex-col gap-4">
-          <!-- vendor recommendation -->
-          <div class="product__vendor">
-            <div class="product__vendor-contacts">
-              <!-- vendor info -->
-              <div class="product__vendor-contacts__info ">
-                <img src="/images/vendor.jpg" class="w-10" alt="vendor">
-                <div class="flex flex-col">
-                  <h4>Малика Абдурахимова</h4>
-                  <span>ID: 1326547</span>
-                </div>
-              </div>
-
-              <a href="tel:+998712007007" class="mt-3">+998 71 200 70 07</a>
-              <a href="#!" class="btn btn-secondary mt-5">Все объявления</a>
-            </div>
+            <button class="icon-phone ">
+              +998 71 200 70 07
+            </button>
           </div>
-
-          <!-- vendor recommendation -->
-          <div class="product__vendor">
-            <div class="product__vendor-contacts">
-              <!-- vendor info -->
-              <div class="product__vendor-contacts__info">
-                <img src="/images/vendor.jpg" class="w-10" alt="vendor">
-                <div class="flex flex-col">
-                  <h4>Малика Абдурахимова</h4>
-                  <span>ID: 1326547</span>
-                </div>
-              </div>
-
-              <a href="tel:+998712007007" class="mt-3">+998 71 200 70 07</a>
-              <a href="#!" class="btn btn-secondary mt-5">Все объявления</a>
-            </div>
-          </div>
-          
-          <div class="bg-white border border-white rounded-2xl overflow-hidden">
-            <h4 class="pt-5 px-4 pb-3 border-b border-slate-300 text-xl font-bold text-black">Местоположение</h4>
-            <a href="#!" class="flex items-start text-sm font-bold text-black py-3 px-4 gap-2">
-              <img src="/images/icons/pin.svg" alt="pin">
-              г.Ташкент, ул.Олмачи 1-й проезд 13 дом
-            </a>
-            <div>
-              <iframe src="https://yandex.uz/map-widget/v1/?ll=69.267412%2C41.341230&mode=search&oid=168841077264&ol=biz&z=16.54" frameborder="1" allowfullscreen="true" class="w-full h-full"></iframe>
-            </div>
-          </div>
-          
-          <button class="btn bg-sky-100 text-blue-500 hover:bg-sky-200 px-6 py-[10px]">
-            Скачать в галерею
-            <img src="/images/icons/download.svg" alt="download">
-          </button>
-        </aside>
-        
+        </div>
+        <!-- slider bottom info end -->
       </div>
-    </main>
-    <!-- main end -->
 
-    <script type="module" src="/main.js"></script>
-  </body>
+      <div class="product__info">
+        <h3>Описание</h3>
+
+        <p>Мультистайлер Dyson Airwrap Complete Long в цветe Vinca blue и Rose Бесплатная доставка по ТАШКЕНТУ!!! 100% оригинал С новыми цилиндрами для завивки и волнения в обоих направлениях, щетками для контроля и придания формы, а также многофункциональной сушилкой для разглаживания Coanda для сушки,разглаживания и сокрытия разлетающихся волос 3 В комплектацию входят 30-мм цилиндрические насадки Airwrap для завивки, 40-мм цилиндрические насадки Airwrap для завивки</p>
+
+        <p>Круглая щетка для создания объема, Мягкая щетка для выпрямления, Жесткая щетка для выпрямление Особенности фена В комплекте Чехол для хранения Термостойкий коврик Щетка для очистки Для длинных до груди или более длинных волос. Пoдxoдит для разных типoв вoлoc.</p>
+
+        <p>Сoздaние лoконoв и волн. Pазглаживaниe. Высушивaние вoлос. Без экстpeмальныx тeмперaтур. В последней версии 2022 Года появились новые насадки, такие как: - обновлённый цилиндр для завивки, предусматривающий поток воздуха в двух направлениях, то есть больше не нужно переставлять насадки. По вопросам пишите в телеграм на номер</p>
+      </div>
+
+      <div class="product__vendor">
+        <h3>Продавец</h3>
+        <div class="product__vendor-contacts">
+          <!-- vendor info -->
+          <div class="product__vendor-contacts__info">
+            <img src="/images/vendor.jpg" alt="vendor">
+            <h4>Малика Абдурахимова</h4>
+            <span>ID: 1326547</span>
+          </div>
+
+          <!-- vendor phone -->
+          <a href="tel:+998712007007">+998 71 200 70 07</a>
+        </div>
+      </div>
+
+    </section>
+    <!-- main content end-->
+
+    <aside class="flex flex-col gap-4">
+      <!-- vendor recommendation -->
+      <div class="product__vendor">
+        <div class="product__vendor-contacts">
+          <!-- vendor info -->
+          <div class="product__vendor-contacts__info ">
+            <img src="/images/vendor.jpg" class="w-10" alt="vendor">
+            <div class="flex flex-col">
+              <h4>Малика Абдурахимова</h4>
+              <span>ID: 1326547</span>
+            </div>
+          </div>
+
+          <a href="tel:+998712007007" class="mt-3">+998 71 200 70 07</a>
+          <a href="#!" class="btn btn-secondary mt-5">Все объявления</a>
+        </div>
+      </div>
+
+      <!-- vendor recommendation -->
+      <div class="product__vendor">
+        <div class="product__vendor-contacts">
+          <!-- vendor info -->
+          <div class="product__vendor-contacts__info">
+            <img src="/images/vendor.jpg" class="w-10" alt="vendor">
+            <div class="flex flex-col">
+              <h4>Малика Абдурахимова</h4>
+              <span>ID: 1326547</span>
+            </div>
+          </div>
+
+          <a href="tel:+998712007007" class="mt-3">+998 71 200 70 07</a>
+          <a href="#!" class="btn btn-secondary mt-5">Все объявления</a>
+        </div>
+      </div>
+
+      <div class="bg-white border border-white rounded-2xl overflow-hidden">
+        <h4 class="pt-5 px-4 pb-3 border-b border-slate-300 text-xl font-bold text-black">Местоположение</h4>
+        <a href="#!" class="icon-location before:text-blue-400 flex items-start text-sm font-bold text-black py-3 px-4 gap-2">
+          г.Ташкент, ул.Олмачи 1-й проезд 13 дом
+        </a>
+        <div>
+          <iframe src="https://yandex.uz/map-widget/v1/?ll=69.267412%2C41.341230&mode=search&oid=168841077264&ol=biz&z=16.54" frameborder="1" allowfullscreen="true" class="w-full h-full"></iframe>
+        </div>
+      </div>
+
+      <button class="btn bg-sky-100 text-blue-500 hover:bg-sky-200 px-6 py-[10px]">
+        Скачать в галерею
+        <img src="/images/icons/download.svg" alt="download">
+      </button>
+    </aside>
+
+  </div>
+</main>
+<!-- main end -->
+
+<script type="module" src="/src/js/libs/swiper/swiper.config.js"></script>
+<script type="module" src="/main.js"></script>
+</body>
 </html>

@@ -187,3 +187,15 @@ export const getProductCardTemplate = (product) => {
   </article>
   `;
 };
+
+// product slide
+export const getSlideTemplate = (imgUrl) => {
+  return `
+    <!-- slide -->
+    <div class="product__slider-img swiper-slide">
+      <img src="${imgUrl}" class="w-full h-full object-cover" alt="slide-img">
+    </div>
+    <!-- slide end -->
+    
+  `
+}

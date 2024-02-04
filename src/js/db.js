@@ -183,6 +183,36 @@ export const productsArr = [
   {
     id: Math.random(),
     imgUrl: '/public/images/products/card1.jpg',
+    images: [
+      {
+        imgUrl: '/public/images/single-product/slide1.jpg',
+        imgAlt: 'slider-img'
+      },
+      {
+        imgUrl: '/public/images/single-product/slide2.jpg',
+        imgAlt: 'slider-img'
+      },
+      {
+        imgUrl: '/public/images/single-product/slide3.jpg',
+        imgAlt: 'slider-img'
+      },
+      {
+        imgUrl: '/public/images/single-product/slide4.jpg',
+        imgAlt: 'slider-img'
+      },
+      {
+        imgUrl: '/public/images/single-product/slide5.jpg',
+        imgAlt: 'slider-img'
+      },
+      {
+        imgUrl: '/public/images/single-product/slide6.jpg',
+        imgAlt: 'slider-img'
+      },
+      {
+        imgUrl: '/public/images/single-product/slide7.jpg',
+        imgAlt: 'slider-img'
+      },
+    ],
     isLiked: false,
     city: 'г. Ташкент',
     name: 'Кепки Corneliani Diamond for him edition.',
