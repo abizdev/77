@@ -6,7 +6,7 @@
   <title>77 Store</title>
   <link rel="stylesheet" href="../assets/styles/fonts.css">
   <link rel="stylesheet" href="../assets/styles/main.css">
-  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
 </head>
 <body class="bg-gray-100">
 
@@ -16,7 +16,7 @@
   <div class="container flex items-center gap-[6px] mt-5 p-3">
     <a href="#!" class="text-sm/[130%] text-black font-medium">Главная</a>
     <span class="w-1 h-1 bg-gray-200 rounded-full"></span>
-    <a href="#!" class="text-sm/[130%] text-gray-200 font-medium">Рестораны и кафе</a>
+    <a href="#!" class="text-sm/[130%] text-gray-300 font-medium">Рестораны и кафе</a>
   </div>
   <!-- pages navigation end -->
 
@@ -27,27 +27,31 @@
       <div class="product__slider">
         <!-- swiper -->
         <div class="swiper relative">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper !h-[266px] md:!h-[481px]">
 
           </div>
 
             <!-- slider navigation btns -->
-            <div class="swiper-navigation h-10 absolute top-[50%] left-0 -translate-y-[50%] w-full flex justify-between items-center">
-              <button class="product__slider-btn swiper-button-prev left-6 icon-chevron-left before:text-slate-200 hover:before:text-white transition duration-300"></button>
-              <button class="product__slider-btn swiper-button-next right-6 icon-chevron-right before:text-slate-200 hover:before:text-white transition duration-300"></button>
+            <div class="swiper-navigation px-6 h-10 absolute top-[50%] left-0 -translate-y-[50%] w-full hidden md:flex justify-between items-center z-[1]">
+              <button class="product__slider-btn swiper-button-prev icon-chevron-left"></button>
+              <button class="product__slider-btn swiper-button-next icon-chevron-right"></button>
             </div>
             <!-- slider navigation btns end -->
 
             <!-- slider slides images -->
-            <div class="product__slider-slides swiper-pagination h-16"></div>
+            <div class="product__slider-slides">
+              <div class="product__slider-pagination swiper-pagination">
+
+              </div>
+            </div>
             <!-- slider slides images end -->
         </div>
         <!-- swiper end -->
 
         <!-- slider bottom info -->
-        <div class="product__slider-info mt-6">
+        <div class="product__slider-info mt-4 md:mt-6">
           <!-- product catetgory -->
-          <div class="product__slider-info__category">
+            <div class="product__slider-info__category">
             <p>Электроника</p>
             <span></span>
             <p>Фены</p>

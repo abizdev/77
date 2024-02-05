@@ -68,7 +68,7 @@ export const footer = `
   <!-- footer content -->
   <div class="container relative flex flex-col h-full pt-14 pb-6 md:p-0 items-center justify-center text-center">
 
-    <img src="/public/images/logo.png" class="w-[122px] absolute top-0 left-[47.5%] -translate-y-[50%] -translate-x-7 shadow-blue" alt="logo">
+    <img src="/public/images/logo.png" class="w-[122px] absolute top-0 left-[50%] -translate-x-[50%] -translate-y-7 shadow-blue" alt="logo">
 
     <p class="text-sm md:text-base text-black max-w-[662px] w-full">77.uz marketplace - это виртуальная платформа в Узбекистане, которая облегчает покупки и продажи, связывая продавцов с потенциальными клиентами.</p>
 

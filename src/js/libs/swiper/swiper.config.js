@@ -26,7 +26,7 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-pagination',
         clickable: true,
         renderBullet: (index, className) => {
-            return `<img url="${product.images[index]["imgUrl"]}" class="${className}" alt="${product.images[index]["imgAlt"]}">`
+            return `<img src="${product.images[index]["imgUrl"]}" class="${className}" alt="${product.images[index]["imgAlt"]}">`
         }
     },
     navigation: {
