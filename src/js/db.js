@@ -2,37 +2,37 @@ export const searchCategories = [
   {
     title: 'Холодильники',
     saved: false,
-    linkUrl: '#!'
+    linkUrl: '/src/pages/productsproducts.html'
   },
   {
     title: 'Телевизоры',
     saved: false,
-    linkUrl: '#!'
+    linkUrl: '/src/pages/products.html'
   },
   {
     title: 'Наушники и аксессуары',
     saved: false,
-    linkUrl: '#!'
+    linkUrl: '/src/pages/products.html'
   },
   {
     title: 'Кухонная мебель',
     saved: false,
-    linkUrl: '#!'
+    linkUrl: '/src/pages/products.html'
   },
   {
     title: 'Телефоны',
     saved: false,
-    linkUrl: '#!'
+    linkUrl: '/src/pages/products.html'
   },
   {
     title: 'Бытовая техника',
     saved: false,
-    linkUrl: '#!'
+    linkUrl: '/src/pages/products.html'
   },
   {
     title: 'Микроволновки',
     saved: false,
-    linkUrl: '#!'
+    linkUrl: '/src/pages/products.html'
   },
 ]
 export const categories = [

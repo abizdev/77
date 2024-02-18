@@ -35,7 +35,7 @@ export const header = `
       </div>
 
       <!-- header logo -->
-      <a href="#!" class="absolute left-[50%] -translate-x-[50%] translate-y-4 md:translate-y-3 px-3.5 p-3 md:py-4 bg-white border border-gray-200 rounded-[20px] md:rounded-b-[20px] md:rounded-t-none shadow-lg">
+      <a href="/index.html" class="absolute left-[50%] -translate-x-[50%] translate-y-4 md:translate-y-3 px-3.5 p-3 md:py-4 bg-white border border-gray-200 rounded-[20px] md:rounded-b-[20px] md:rounded-t-none shadow-lg">
         <img src="/public/images/logo.png" class="w-24 md:w-full" alt="logo">
       </a>
 
@@ -47,9 +47,9 @@ export const header = `
 
         <span class="hidden md:block w-[1px] h-[32px] bg-gray-100 hidden md:block"></span>
 
-        <a href="#!" class="btn btn-secondary icon-login before:text-black flex-row-reverse">
+        <button class="login-btn btn btn-secondary icon-login before:text-black flex-row-reverse">
           <span class="hidden md:block">Войти</span>
-        </a>
+        </button>
       </div>
     </div>
     <!-- header content -->
@@ -117,10 +117,10 @@ export const footer = `
 export const searchItemTemplate = (item) => {
   return `
     <!-- search item -->
-    <div class="search-form__items-item bg-white p-4 flex items-center justify-between gap-2 icon-star before:text-xl before:w-6 before:h-6 before:text-yellow-500 hover:bg-slate-100 transition duration-300 cursor-pointer">
+    <a href="${item.linkUrl}" class="search-form__items-item bg-white p-4 flex items-center justify-between gap-2 icon-star before:text-xl before:w-6 before:h-6 before:text-yellow-500 hover:bg-slate-100 transition duration-300 cursor-pointer">
       <p class="flex-grow text-base text-black font-medium">${item.title}</p>
-      <a href="${item.linkUrl}" class="icon-chevron-right"></a>
-    </div>
+      <span class="icon-chevron-right"></span>
+    </a>
   `
 }
 

@@ -10,6 +10,55 @@
   </head>
   <body class="bg-gray-100">
 
+    <!-- modal -->
+    <div class="modal-wrapper hidden fixed top-0 w-full h-full bg-black/[0.4] z-50 flex items-center justify-center">
+        <div class="modal max-w-[378px] w-[90%] rounded-xl bg-white p-5">
+            <div class="modal-login">
+                <!-- modal heading -->
+                <div class="flex flex-col gap-2">
+                    <div class="flex justify-between items-center">
+                        <h2 class="flex items-center gap-2 text-2xl font-bold">Добро пожаловать!</h2>
+                        <span class="modal-close icon-xmark before:text-2xl cursor-pointer"></span>
+                    </div>
+                    <p class="text-sm text-slate-400 font-medium">Войти в систему чтобы торговать в системе</p>
+                </div>
+                <!-- modal heading end -->
+
+                <!-- modal content -->
+                <form class="flex flex-col gap-y-4 mt-7">
+                    <div class="flex flex-col gap-2">
+                        <label for="login">Логин</label>
+                        <div class="input-item input-login">
+                            <input id="login" type="text" placeholder="Введите логин">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <label for="password">Пароль</label>
+                        <div class="input-item input-password">
+                            <input id="password" type="password" placeholder="Введите пароль">
+                            <span class="icon-eye-slash before:text-slate-600 cursor-pointer"></span>
+                        </div>
+                        <button class="text-blue-500 text-xs self-start">Забыли пароль?</button>
+                    </div>
+                </form>
+                <!-- modal content end -->
+
+                <!-- modal footer -->
+                <div class="flex flex-col mt-16 gap-2">
+                    <button class="log-user btn btn-primery bg-blue-400 hover:bg-blue-400">Войти</button>
+                    <div class="flex items-center gap-2">
+                        <span class="flex-grow h-px bg-slate-100"></span>
+                        <p class="text-sm text-slate-400">Хотите стать продавцом?</p>
+                        <span class="flex-grow h-px bg-slate-100"></span>
+                    </div>
+                    <button class="btn btn-secondary text-blue-400 hover:bg-transparent border border-blue-400 bg-transparent">Подать заявку</button>
+                </div>
+                <!-- modal footer end -->
+            </div>
+        </div>
+    </div>
+    <!-- modal end -->
+
     <!-- main -->
     <main class="main bg-white mt-[76px] border border-transparent flex flex-col ">
       <!-- search form -->
@@ -61,7 +110,7 @@
 
         <div class="container">
           <!-- ads content -->
-          <div class="ads__content mt-10 grid grid-cols-4 gap-6"></div>
+          <div class="ads__content products-content mt-10 grid grid-cols-4 gap-6"></div>
           <!-- ads content end -->
 
           <button class="mx-auto mt-10 btn btn-secondary rounded-[100px] icon-chevron-double-down flex-row-reverse">
@@ -73,7 +122,9 @@
       <!-- ads end-->
     </main>
     <!-- main end -->
-
     <script type="module" src="main.js"></script>
+    <script type="module" src="src/js/login.js"></script>
+    <script type="module" src="src/js/products.js"></script>
+    <script type="module" src="src/js/index.js"></script>
   </body>
 </html>

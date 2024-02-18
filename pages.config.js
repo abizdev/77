@@ -1,8 +1,8 @@
-import { resolve } from 'path'
+import { resolve } from "path";
 
-const pages = [
-    {name: 'categories', path: resolve(__dirname, '/src/pages/categories.html')},
-    {name: 'product', path: resolve(__dirname, '/src/pages/product.html')},
-]
+const pages = {
+  product: resolve(__dirname, 'src', 'pages', 'product.html'),
+  products: resolve(__dirname, 'src', 'pages', 'products.html'),
+}
 
-export default pages
+export default pages;
