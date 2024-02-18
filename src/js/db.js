@@ -2,7 +2,7 @@ export const searchCategories = [
   {
     title: 'Холодильники',
     saved: false,
-    linkUrl: '/src/pages/productsproducts.html'
+    linkUrl: '/src/pages/products.html'
   },
   {
     title: 'Телевизоры',
