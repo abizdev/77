@@ -12,15 +12,18 @@
 
     <!-- modal -->
     <div class="modal-wrapper hidden fixed top-0 w-full h-full bg-black/[0.4] z-50 flex items-center justify-center">
-        <div class="modal max-w-[378px] w-[90%] rounded-xl bg-white p-5">
+        <div class="modal relative max-w-[378px] w-[90%] rounded-xl bg-white p-5">
+          <span class="modal-close icon-xmark before:text-2xl cursor-pointer absolute top-5 right-5"></span>
+            <!-- login -->
             <div class="modal-login">
                 <!-- modal heading -->
-                <div class="flex flex-col gap-2">
-                    <div class="flex justify-between items-center">
-                        <h2 class="flex items-center gap-2 text-2xl font-bold">Добро пожаловать!</h2>
-                        <span class="modal-close icon-xmark before:text-2xl cursor-pointer"></span>
-                    </div>
-                    <p class="text-sm text-slate-400 font-medium">Войти в систему чтобы торговать в системе</p>
+                <div class="modal-heading">
+                  <div class="flex flex-col gap-2">
+                      <div class="flex justify-between items-center">
+                          <h2 class="flex items-center gap-2 text-2xl font-bold">Добро пожаловать!</h2>
+                      </div>
+                      <p class="text-sm text-slate-400 font-medium">Войти в систему чтобы торговать в системе</p>
+                  </div>
                 </div>
                 <!-- modal heading end -->
 
@@ -38,7 +41,7 @@
                             <input id="password" type="password" placeholder="Введите пароль">
                             <span class="icon-eye-slash before:text-slate-600 cursor-pointer"></span>
                         </div>
-                        <button class="text-blue-500 text-xs self-start">Забыли пароль?</button>
+                        <button type="button" class="text-blue-500 text-xs self-start">Забыли пароль?</button>
                     </div>
                 </form>
                 <!-- modal content end -->
@@ -55,6 +58,26 @@
                 </div>
                 <!-- modal footer end -->
             </div>
+            <!-- login end -->
+          
+            <!-- registration -->
+            <div class="modal-register">
+            
+            </div>
+            <!-- registration end -->
+          
+            <!-- forgot-password -->
+            <div class="modal-restore-password hidden flex-col justify-end items-center">
+              <div class="w-[74px] h-[74px] rounded-full border border-amber-400 p-1">
+                <span class="w-full h-full rounded-full bg-amber-400 flex items-center justify-center">
+                  <img src="/images/icons/information.svg" alt="information">
+                </span>
+              </div>
+              <p class="text-sm text-gray-400 text-center">Забыли пароль? Для восстановления пароля обратитесь
+                администратору</p>
+              <a href="tel:+998974504500" class="w-full btn btn-secondary icon-phone mt-5">+998 97 450 45 00</a>
+            </div>
+            <!-- forgot-password end -->
         </div>
     </div>
     <!-- modal end -->

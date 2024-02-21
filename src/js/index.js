@@ -1,4 +1,4 @@
-import { searchCategories, categories } from "./db";
+import { searchCategories } from "./db";
 import {
   searchItemTemplate,
   getCategoryTemplate,
@@ -18,9 +18,45 @@ const searchPopup = document.querySelector(".sear-form__popup");
 const categoriesContent = document.querySelector(".categories__content");
 const dropdownContainer = document.querySelector(".dropdown");
 
-/* =================== SEARCH FUNCTIONALITY ===================== */
+let categories = null
+let subCategories = null
 
-// search click
+/* =================== Fetching CATEGORIES ===================== */
+const BASE_URL = "https://77-dev.uicgroup.tech/api/v1";
+
+const getCategories = async () => {
+  try {
+    const res = await fetch(BASE_URL + '/store/category/')
+    categories = await res.json()
+
+    // render categories
+    categories.forEach((category, index) => {
+      categoriesContent.insertAdjacentHTML(
+        "beforeend",
+        getCategoryTemplate(category, index)
+      );
+    });
+
+    getCategoriesItems()
+
+  } catch (error) {
+    console.log('wooops erro in getting categories', error);
+  }
+}
+const getSubCategories = async (categoryId) => {
+  try {
+    const res = await fetch(BASE_URL + `/store/sub-category/?parent__id=${categoryId}`)
+    subCategories = await res.json()
+
+    console.log(subCategories);
+
+  } catch (error) {
+    console.log('wooops error in getting subcategories', error);
+  }
+}
+
+/* =================== SEARCH FUNCTIONALITY ===================== */
+// search open
 searchWrapper.addEventListener("click", (event) => {
   event.stopPropagation();
   searchInput.focus();
@@ -57,7 +93,6 @@ body.addEventListener("click", (event) => {
 
   body.removeAttribute("style");
 });
-/* =================== SEARCH FUNCTIONALITY END ===================== */
 
 /* =================== CATEGORIES FUNCTIONALITY ===================== */
 
@@ -69,6 +104,7 @@ const showEl = (el, display = "hidden") => {
     el.classList.add(display);
   }
 };
+
 const hideEl = (el, display = "hidden") => {
   if (display) {
     el.classList.remove(...display);
@@ -76,47 +112,52 @@ const hideEl = (el, display = "hidden") => {
   el.classList.add("hidden");
 };
 
-categories.forEach((category, index) => {
-  categoriesContent.insertAdjacentHTML(
-    "beforeend",
-    getCategoryTemplate(category, index)
-  );
-});
-
 const setDropdownPosition = (category, index) => {
   const dropdownGridRow = Math.floor(index / 3) + 2;
   dropdownContainer.style.gridRow = dropdownGridRow;
 
   showEl(dropdownContainer, "dropdown-grid");
 
-  getDropdownTemplate(dropdownContainer, category?.subcategory);
+  getDropdownTemplate(dropdownContainer, subCategories);
 };
 
-const categoriesItems = document.querySelectorAll(".categories__item");
+const getCategoriesItems = () => {
+  const categoriesItems = document.querySelectorAll(".categories__item");
+  
+  categoriesItems.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      const categoryId = item.getAttribute('data-id')
 
-categoriesItems.forEach((item, index) => {
-  item.addEventListener("click", () => {
-    // check if item contains active
-    if (item.classList.contains("active")) {
-      item.classList.remove("active");
-
-      dropdownContainer.innerHTML = "";
-
-      hideEl(dropdownContainer, ["dropdown-grid", "dropdown-flex"]);
-    } else {
-      // remove active from all categories items and dropdown then add to clicked item
-      categoriesItems.forEach((item) => {
+      // check if item contains active
+      if (item.classList.contains("active")) {
         item.classList.remove("active");
-
+  
         dropdownContainer.innerHTML = "";
-
+  
         hideEl(dropdownContainer, ["dropdown-grid", "dropdown-flex"]);
-      });
+      } else {
+        // remove active from all categories items and dropdown then add to clicked item
+        categoriesItems.forEach((item) => {
+          item.classList.remove("active");
+  
+          dropdownContainer.innerHTML = "";
+  
+          hideEl(dropdownContainer, ["dropdown-grid", "dropdown-flex"]);
+        });
+  
+        item.classList.toggle("active");
 
-      item.classList.toggle("active");
-      setDropdownPosition(categories[index], index);
-    }
+        console.log(categoryId);
+
+        getSubCategories(categories[index]['id'])
+        setDropdownPosition(categories[index], index);
+      }
+    });
   });
-});
+}
 
 /* =================== CATEGORIES FUNCTIONALITY END ===================== */
+
+
+// on load
+getCategories()

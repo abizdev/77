@@ -125,18 +125,18 @@ export const searchItemTemplate = (item) => {
 }
 
 // main category
-export const getCategoryTemplate = (category, index) => {
+export const getCategoryTemplate = (category) => {
   return `
   <!-- categories-item -->
-  <article class="categories__item h-[85px] relative item-border rounded-xl pr-3 pl-11 py-[22px] flex items-center justify-end gap-6 shadow-md col-span-1 w-11/12 xl:w-[336px] w-full cursor-pointer">
+  <article class="categories__item h-[85px] relative item-border rounded-xl pr-3 pl-11 py-[22px] flex items-center justify-end gap-6 shadow-md col-span-1 w-11/12 xl:w-[336px] w-full cursor-pointer" data-id="${category.id}">
                 
     <div class="categories__item--img absolute top-[50%] -left-9 -translate-y-[50%] w-16 h-16 item-border rounded-xl flex items-center justify-center shadow-md transition duration-300">
-      <img src="${category.imgUrl}" alt="category">
+      <img src="${category.icon}" alt="category">
     </div>
 
     <div class="categories__item--info flex flex-col flex-grow gap-1">
-      <h4 class="text-base/[119%] font-semibold">${category.title}</h4>
-      <p class="text-sm text-gray-300">${category.text}</p>
+      <h4 class="text-base/[119%] font-semibold">${category.name}</h4>
+      <p class="text-sm text-gray-300">${category.product_count} обьявлений</p>
     </div>
 
     <button class="icon-chevron-right transition duration-300 before:text-slate-300"></button>
@@ -147,7 +147,7 @@ export const getCategoryTemplate = (category, index) => {
 
 // dropdown template
 export const getDropdownTemplate = (el, subcategories) => {
-  if (!subcategories) {
+  if (!subcategories || !subcategories.length) {
     el.classList.replace('dropdown-grid', 'dropdown-flex')
     el.innerHTML +=  `
     <img src="/public/images/empty-category.png" alt="empty-category" />
@@ -161,7 +161,7 @@ export const getDropdownTemplate = (el, subcategories) => {
     el.classList.replace('dropdown-flex', 'dropdown-grid')
     el.innerHTML += `
     <a href="${item.linkUrl}" class="dropdown__item icon-chevron-right p-3 flex flex-row-reverse items-center gap-[10px]">
-      <h5 class="flex-grow text-sm text-black font-medium">${item.title}</h5>
+      <h5 class="flex-grow text-sm text-black font-medium">${item.name}</h5>
     </a>
     `;
   });

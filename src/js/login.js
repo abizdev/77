@@ -6,6 +6,7 @@ const logUserBtn = document.querySelector(".log-user");
 
 const modal = document.querySelector(".modal");
 const modalWrapper = document.querySelector(".modal-wrapper");
+const modalHeading = document.querySelector('.modal-heading')
 const modalClose = document.querySelector(".modal-close");
 
 const inputLogin = document.querySelector(".input-login input");
@@ -29,15 +30,15 @@ modalClose.addEventListener("click", (event) => {
 logUserBtn.addEventListener("click", () => {
   if (inputLogin.value.length >= 2 && inputPassword.value.length >= 8) {
     const userData = {
-      phone_number: inputLogin.value,
-      password: inputPassword.value,
+      phone_number: '+998911111111', /*inputLogin.value*/
+      password: 'parol123', /*inputPassword.value*/
     };
+
 
     fetch(`${BASE_URL}/accounts/login/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authentication: `Barer ${localStorage.refresh_token}`,
       },
       body: JSON.stringify(userData),
     })
@@ -53,6 +54,18 @@ logUserBtn.addEventListener("click", () => {
       .catch((error) => {
         console.log("wooops error with data", error);
       });
+
+    toggleRegistrationModal()
+
+    // fetch(`${BASE_URL}/accounts/me/`, {
+    //   method: 'GET',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //     Authorization: `Bearer ${localStorage.access}`
+    //   },
+    // })
+    //   .then((res) => console.log(res.json()))
+    //   .catch((err) => console.log(err))
   } else {
     alert("Данные не введены или мало данных");
   }
