@@ -1,62 +1,4 @@
 
-// header
-export const header = `
-<!-- header -->
-<header class=" py-3 md:py-5 sticky top-0 z-40 bg-white/[0.92] before:absolute before:top-0 before:z-[-1] before:w-full before:h-full before:backdrop-blur-[6px]">
-  <div class="container">
-
-    <!-- header content -->
-    <div class="flex justify-between items-center">
-
-      <!-- header contacts -->
-      <div class="flex items-center gap-6">
-
-        <div class="cursor-pointer relative icon-chevron-down group before:text-black before:w-6 before:h-6 text-sm/[130%] text-bold text-black flex flex-row-reverse items-center gap-1 hover:before:rotate-180 hover:before:text-blue-400 before:transition before:duration-300">
-          <span class="text-sm font-medium hidden md:block">Русский</span>
-          <img src="/public/images/ru-lang.png" alt="lang">
-          <span class="text-sm font-medium uppercase md:hidden">Ру</span>
-
-          <div class="lang-dropdown absolute top-[25px] left-[15px] w-[151px] shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white rounded-lg pl-4 transition duration-300">
-            <div class="lang-dropdown__item flex items-center gap-2">
-              <img src="/public/images/ru-lang.png" alt="ru-lang" />
-              <span class="flex-grow text-sm font-medium py-[11px] border-b border-slate-300">Русский</span>
-            </div>
-            <div class="lang-dropdown__item flex items-center gap-2">
-              <img src="/public/images/uz-lang.png" alt="uz-lang" />
-              <span class="flex-grow text-sm font-medium py-[11px]">O’zbekcha</span>
-            </div>
-          </div>
-        </div>
-
-        <a href="tel:+998885005000" class="hidden icon-phone before:text-slate-400 md:flex text-sm/[130%] text-bold text-black items-center gap-2">
-          +998 88 500 50 00
-        </a>
-
-      </div>
-
-      <!-- header logo -->
-      <a href="/index.html" class="absolute left-[50%] -translate-x-[50%] translate-y-4 md:translate-y-3 px-3.5 p-3 md:py-4 bg-white border border-gray-200 rounded-[20px] md:rounded-b-[20px] md:rounded-t-none shadow-lg">
-        <img src="/public/images/logo.png" class="w-24 md:w-full" alt="logo">
-      </a>
-
-      <!-- header links -->
-      <div class="flex items-center gap-3 md:gap-4">
-        <a href="#!" class="btn btn-secondary icon-heart before:text-blue-400 md:bg-transparent md:rounded-none md:p-0 hover:bg-transparent">
-          <span class="hidden md:block">Избранные</span>
-        </a>
-
-        <span class="hidden md:block w-[1px] h-[32px] bg-gray-100 hidden md:block"></span>
-
-        <button class="login-btn btn btn-secondary icon-login before:text-black flex-row-reverse">
-          <span class="hidden md:block">Войти</span>
-        </button>
-      </div>
-    </div>
-    <!-- header content -->
-  </div>
-</header>
-<!-- header end -->
-`
 
 // footer
 export const footer = `
@@ -112,6 +54,75 @@ export const footer = `
 </footer>
 <!-- footer end -->
 `
+
+// header
+export const getHeader = (user) => {
+  let button = user === null 
+    ? `<button class="login-btn btn btn-secondary icon-login before:text-black flex-row-reverse">
+        <span class="hidden md:block">Войти</span>
+      </button>`
+    : `<a href="#!" class="btn btn-secondary flex items-center gap-2">
+        <img src="${user.profile_photo ? user.profile_photo : '/images/no-user.jpg' }" class="rounded-full w-[30px] h-[30px]" alt="user" />
+        <span>${user.full_name}</span>
+        <span class="icon-chevron-right"></span>
+       </a>`
+
+  return `
+  <!-- header -->
+  <header class=" py-3 md:py-5 sticky top-0 z-40 bg-white/[0.92] before:absolute before:top-0 before:z-[-1] before:w-full before:h-full before:backdrop-blur-[6px]">
+    <div class="container">
+  
+      <!-- header content -->
+      <div class="flex justify-between items-center">
+  
+        <!-- header contacts -->
+        <div class="flex items-center gap-6">
+  
+          <div class="cursor-pointer relative icon-chevron-down group before:text-black before:w-6 before:h-6 text-sm/[130%] text-bold text-black flex flex-row-reverse items-center gap-1 hover:before:rotate-180 hover:before:text-blue-400 before:transition before:duration-300">
+            <span class="text-sm font-medium hidden md:block">Русский</span>
+            <img src="/public/images/ru-lang.png" alt="lang">
+            <span class="text-sm font-medium uppercase md:hidden">Ру</span>
+  
+            <div class="lang-dropdown absolute top-[25px] left-[15px] w-[151px] shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible bg-white rounded-lg pl-4 transition duration-300">
+              <div class="lang-dropdown__item flex items-center gap-2">
+                <img src="/public/images/ru-lang.png" alt="ru-lang" />
+                <span class="flex-grow text-sm font-medium py-[11px] border-b border-slate-300">Русский</span>
+              </div>
+              <div class="lang-dropdown__item flex items-center gap-2">
+                <img src="/public/images/uz-lang.png" alt="uz-lang" />
+                <span class="flex-grow text-sm font-medium py-[11px]">O’zbekcha</span>
+              </div>
+            </div>
+          </div>
+  
+          <a href="tel:+998885005000" class="hidden icon-phone before:text-slate-400 md:flex text-sm/[130%] text-bold text-black items-center gap-2">
+            +998 88 500 50 00
+          </a>
+  
+        </div>
+  
+        <!-- header logo -->
+        <a href="/index.html" class="absolute left-[50%] -translate-x-[50%] translate-y-4 md:translate-y-3 px-3.5 p-3 md:py-4 bg-white border border-gray-200 rounded-[20px] md:rounded-b-[20px] md:rounded-t-none shadow-lg">
+          <img src="/public/images/logo.png" class="w-24 md:w-full" alt="logo">
+        </a>
+  
+        <!-- header links -->
+        <div class="flex items-center gap-3 md:gap-4">
+          <a href="#!" class="btn btn-secondary icon-heart before:text-blue-400 md:bg-transparent md:rounded-none md:p-0 hover:bg-transparent">
+            <span class="hidden md:block">Избранные</span>
+          </a>
+  
+          <span class="hidden md:block w-[1px] h-[32px] bg-gray-100 hidden md:block"></span>
+  
+          ${button}
+        </div>
+      </div>
+      <!-- header content -->
+    </div>
+  </header>
+  <!-- header end -->
+  `
+}
 
 // search popup item
 export const searchItemTemplate = (item) => {
